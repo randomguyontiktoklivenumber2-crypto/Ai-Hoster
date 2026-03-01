@@ -9,6 +9,9 @@ export default function Home() {
   async function send() {
     const res = await fetch("/api/chat", {
       method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify({ prompt }),
     });
 
@@ -17,7 +20,7 @@ export default function Home() {
   }
 
   return (
-    <main className="flex flex-col items-center justify-center h-screen p-8">
+    <main className="flex flex-col items-center justify-center min-h-screen p-8">
       <h1 className="text-3xl font-bold mb-4">My AI Website</h1>
 
       <textarea
@@ -38,5 +41,4 @@ export default function Home() {
       </div>
     </main>
   );
-}
 }
