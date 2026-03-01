@@ -29,16 +29,16 @@ export default function Home() {
         onChange={(e) => setPrompt(e.target.value)}
       />
 
-      <button
-        onClick={send}
-        className="bg-black text-white px-4 py-2 mt-4"
-      >
-        Send
-      </button>
-
-      <div className="mt-6 max-w-lg">
-        <p>{reply}</p>
-      </div>
-    </main>
-  );
-}
+ <button
+  onClick={send}
+  style={{
+    backgroundColor: "black",
+    color: "white",
+    padding: "10px 20px",
+    marginTop: "15px",
+    cursor: "pointer",
+    borderRadius: "8px"
+  }}
+>
+  Send
+</button>
